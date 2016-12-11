@@ -14,7 +14,7 @@
 	    <td><%= funcionario.nome_completo %> </td>
 	    <td><%= funcionario.cargo %></td>
 	    <td><%= funcionario.email %></td>
-	    <td>0</td><!--quantidade de taregas -->
+	    <td><%= link_to funcionario.tarefas.count, funcionario_tarefas_url(funcionario) %> </td><!--quantidade de taregas -->
 	  </tr>
   <% end %>
 </table>
