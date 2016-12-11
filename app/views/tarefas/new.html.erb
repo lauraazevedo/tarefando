@@ -1,0 +1,30 @@
+
+<meta charset="utf-8">
+<h1>Nova tarefa</h1>
+
+<%= form_for [@funcionario, @tarefa] do |f| %>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">titulo</span>
+    <%= f.text_field :titulo %>
+  </div>
+  <br />
+  <br />
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">descricao</span>
+  <%= f.text_field :descricao %>
+  </div>
+  <br />
+  <br />
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">prazo</span>
+  <%= f.text_field :prazo %>
+    <span class="input-group-addon" id="basic-addon1">status</span>
+  <%= f.text_field :status %>
+  </div>
+  <br />
+  <br />
+  <p>
+    <%= f.submit value: 'Enviar' %>
+  </p>
+<% end %>
+
