@@ -1,4 +1,4 @@
-<h3> <%= @funcionario.nome_completo %> </h3>
+<h3> Funcionário: <%= @funcionario.nome_completo %> </h3>
 
 <table class="table">
   <tr>
@@ -10,11 +10,10 @@
 
   <% @tarefas.each do |tarefa| %>
 	  <tr>
-	    <td><%= tarefa.tarefa %> </td>
+	    <td><%= tarefa.titulo %> </td>
 	    <td><%= tarefa.descricao %></td>
 	    <td><%= tarefa.status %></td>
-      <td><%= tarefa.prazo %></td>
-
+      <td><%= tarefa.prazo %> dias</td>
 	</tr>
   <% end %>
 </table>
