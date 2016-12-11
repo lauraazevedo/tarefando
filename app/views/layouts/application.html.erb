@@ -9,10 +9,23 @@
   </head>
 
   <body>
-    <% if flash[:success] %>
-      <div class="success"><%= flash[:success] %></div>
-    <% end %>
 
-    <%= yield %>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            Tarefando
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <% if flash[:success] %>
+        <div class="alert alert-success"><%= flash[:success] %></div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
